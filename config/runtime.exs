@@ -63,6 +63,8 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+  config :live_admin, ecto_repo: LiveAdminIssue.Repo
+
   # ## SSL Support
   #
   # To get SSL working, you will need to add the `https` key

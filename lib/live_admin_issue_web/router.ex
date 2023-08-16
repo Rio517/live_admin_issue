@@ -71,6 +71,12 @@ defmodule LiveAdminIssueWeb.Router do
   scope "/", LiveAdminIssueWeb do
     pipe_through [:browser, :require_authenticated_user]
 
+    import LiveAdmin.Router
+
+    live_admin "/my_admin" do
+      admin_resource("/posts", LiveAdminIssue.Posts.Post)
+    end
+
     live_session :require_authenticated_user,
       on_mount: [{LiveAdminIssueWeb.UserAuth, :ensure_authenticated}] do
       live "/users/settings", UserSettingsLive, :edit

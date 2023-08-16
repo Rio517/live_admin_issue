@@ -2,6 +2,8 @@ defmodule LiveAdminIssue.Posts.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
+  use LiveAdmin.Resource
+
   schema "posts" do
     field :hidden, :boolean, default: false
     field :tags, {:array, Ecto.Enum}, values: [:option1, :option2, :option3]
