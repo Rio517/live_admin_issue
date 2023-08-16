@@ -25,7 +25,7 @@ defmodule LiveAdminIssue.PostsTest do
 
       assert {:ok, %Post{} = post} = Posts.create_post(valid_attrs)
       assert post.hidden == true
-      assert post.tags == ["option1", "option2"]
+      assert post.tags == [:option1, :option2]
       assert post.title == "some title"
       assert post.view == 42
     end
@@ -40,7 +40,7 @@ defmodule LiveAdminIssue.PostsTest do
 
       assert {:ok, %Post{} = post} = Posts.update_post(post, update_attrs)
       assert post.hidden == false
-      assert post.tags == ["option1"]
+      assert post.tags == [:option1]
       assert post.title == "some updated title"
       assert post.view == 43
     end

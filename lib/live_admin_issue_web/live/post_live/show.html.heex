@@ -12,7 +12,7 @@
   <:item title="Title"><%= @post.title %></:item>
   <:item title="Hidden"><%= @post.hidden %></:item>
   <:item title="View"><%= @post.view %></:item>
-  <:item title="Tags"><%= @post.tags %></:item>
+  <:item title="Tags"><%= inspect(@post.tags) %></:item>
 </.list>
 
 <.back navigate={~p"/posts"}>Back to posts</.back>

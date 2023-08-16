@@ -4,7 +4,7 @@ defmodule LiveAdminIssue.Posts.Post do
 
   schema "posts" do
     field :hidden, :boolean, default: false
-    field :tags, {:array, :string}
+    field :tags, {:array, Ecto.Enum}, values: [:option1, :option2, :option3]
     field :title, :string
     field :view, :integer
 

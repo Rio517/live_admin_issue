@@ -27,7 +27,7 @@ defmodule LiveAdminIssueWeb.PostLive.FormComponent do
           type="select"
           multiple
           label="Tags"
-          options={[{"Option 1", "option1"}, {"Option 2", "option2"}]}
+          options={[{"Option 1", "option1"}, {"Option 2", "option2"}, {"Option 3", "option3"}]}
         />
         <:actions>
           <.button phx-disable-with="Saving...">Save Post</.button>
