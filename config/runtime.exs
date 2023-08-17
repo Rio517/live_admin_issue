@@ -7,6 +7,8 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 
+config :live_admin, ecto_repo: LiveAdminIssue.Repo
+
 # ## Using releases
 #
 # If you use `mix release`, you need to explicitly enable the server
@@ -62,8 +64,6 @@ if config_env() == :prod do
       port: port
     ],
     secret_key_base: secret_key_base
-
-  config :live_admin, ecto_repo: LiveAdminIssue.Repo
 
   # ## SSL Support
   #
