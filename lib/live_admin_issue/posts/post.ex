@@ -10,6 +10,12 @@ defmodule LiveAdminIssue.Posts.Post do
     field :title, :string
     field :view, :integer
 
+    embeds_many :comments, Comment do
+      field :body, :string
+      field :user, :string
+      field :tags, {:array, Ecto.Enum}, values: [:tag1, :tag2, :tag3]
+    end
+
     timestamps()
   end
 
